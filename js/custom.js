@@ -825,32 +825,23 @@ window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', eve
 document.addEventListener('DOMContentLoaded', function() {
     const toggleCheckbox = document.getElementById('theme-toggle');
     const sections = document.querySelectorAll('.theme');
-    const prefersDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
-
-    toggleCheckbox.checked = prefersDarkMode; // Set checkbox based on system preference
+    
+    // Initialize with dark theme
+    toggleCheckbox.checked = true; // Set checkbox to checked by default for dark mode
+    sections.forEach(section => section.classList.add('dark'));
 
     toggleCheckbox.addEventListener('change', function() {
         if (this.checked) {
             sections.forEach(section => {
-                section.classList.remove('light');
                 section.classList.add('dark');
+                section.classList.remove('light');
             });
         } else {
             sections.forEach(section => {
-                section.classList.remove('dark');
                 section.classList.add('light');
+                section.classList.remove('dark');
             });
         }
     });
-
-    // Apply initial theme based on the system preference
-    if (prefersDarkMode) {
-        sections.forEach(section => {
-            section.classList.add('dark');
-        });
-    } else {
-        sections.forEach(section => {
-            section.classList.add('light');
-        });
-    }
 });
+

@@ -4269,7 +4269,7 @@ font-weight: 700;
 /* ============== Home ======================== */
 
 .hero-remit-index{
-  background-image: url(../img/rows.png);
+  background-image: url(../img/index/hero-bg.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -4771,28 +4771,9 @@ iframe {
   color: #ccc;
 }
 
-/* Button styling adjusted for icons */
-button {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 10px;
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-  font-size: 24px; /* Adjust size as necessary */
-  color: inherit;
-  gap: 20px;
-  
-}
 
-/* Styling specifically for icons within the button */
-button i {
-  transition: color 0.3s ease;
-}
 
-/* Specific styles for dark and light themes can be adjusted if necessary */
-
+/* Dark mode and Light mode Button */
 
 /* Hide the checkbox */
 .hidden-checkbox {
@@ -4813,7 +4794,6 @@ button i {
   transition: background 0.3s, transform 0.5s ease-in-out;
 }
 
-/* Rotation Effect */
 .toggle-button:has(.hidden-checkbox:checked) {
   transform: rotate(180deg);
 }
@@ -4823,21 +4803,19 @@ button i {
 }
 
 body:has(.hidden-checkbox:checked) .toggle-button {
-  background: #374151;
+  background: #00374A;
 }
 
 body:has(.hidden-checkbox:checked) .toggle-button:hover {
-  background: #4b5563;
+  background: #00374A;
 }
 
-/* Icon Wrapper */
 .icon-wrapper {
   position: relative;
   width: 24px;
   height: 24px;
 }
 
-/* Icon Styles */
 .icon {
   position: absolute;
   width: 100%;
@@ -4851,7 +4829,6 @@ body:has(.hidden-checkbox:checked) .toggle-button:hover {
   transform: rotate(-180deg);
 }
 
-/* Toggle between sun and moon */
 .hidden-checkbox:checked + .toggle-button .sun {
   opacity: 0;
   transform: rotate(180deg);
@@ -4862,9 +4839,8 @@ body:has(.hidden-checkbox:checked) .toggle-button:hover {
   transform: rotate(0deg);
 }
 
-/* Change Theme */
 body:has(.hidden-checkbox:checked) {
-  background: #111827;
+  background: #00374A;
   color: #f3f4f6;
 }
 

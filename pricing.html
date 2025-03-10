@@ -192,6 +192,25 @@
         </section>
 
         <section class="custom-bg">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <div class="calculator">
+                            <label for="transactionInput">Monthly Transaction Number:</label>
+                            <input type="number" id="transactionInput" min="0" max="5000" placeholder="0 - 5000">
+                            <!-- <span>x</span> -->
+                            <label for="transactionInput">Per Transaction Cost</label>
+                            <input type="text" class="fixed-input" value="0.082" disabled>
+                            <span>=</span>
+                            <span class="result" id="result">0</span>
+                            <button onclick="calculateResult()">Calculate</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="custom-bg">
             <div class="left-circle-blur"></div>
             <!-- <div class="right-circle-blur"></div> -->
             <div class="container" style="z-index: 99;">
@@ -813,7 +832,10 @@
                 <div class="row text-center justify-content-center">
                     <div class="form-read-more thankyou-mod-btn mt-4">
                         <p class="text-white">Book a time</p>
-                        <a href="#">Click here</a>
+                        <div class="compl-btn text-white ">
+                            <a href="#" class="mt-1 text-center text-white button-center">Request Demo
+                                <span>→</span></a>
+                        </div>
                     </div>
                 </div>
             </div>

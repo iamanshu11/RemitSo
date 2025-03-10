@@ -845,3 +845,14 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
+
+function calculateResult() {
+    let input = document.getElementById("transactionInput").value;
+    let num = parseFloat(input);
+    if (isNaN(num) || num < 0 || num > 5000) {
+        alert("Please enter a number between 0 and 5000.");
+        return;
+    }
+    let result = num * 0.082;
+    document.getElementById("result").innerText = result.toFixed(2);
+}
